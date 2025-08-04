@@ -1,3 +1,103 @@
+*{
+    box-sizing: border-box;
+}
 body{
-    font-size: 1rem;
+    min-height: 100vh;
+}
+#headersvg{
+    height: 50px;
+}
+#tempchoose{
+    position: absolute;
+    display: flex;
+    background-color: lightblue;
+    top: 0px;
+    left: 0px;
+    border: 1px solid black;
+    font-size: 2rem;
+}
+#tempchoose > *{
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0px;
+    flex: 1;
+    text-align: center;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 30vh;
+}
+header > div {
+    display: flex;
+    align-items: center;
+}
+h1{
+    font-size: 3rem;
+}
+input[type="text"]{
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+form{
+    width: 40%;
+    display: flex;
+    gap: 8px;
+}
+.grid{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #dedede;
+    width: clamp(400px,60vw,800px);
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas:
+    "Condition Condition ResolvedAddress ResolvedAddress ResolvedAddress"
+    "weathersymbol weathersymbol Temperature Temperature Temperature"
+    "weathersymbol weathersymbol PrecProb PrecProb PrecProb"
+    "weathersymbol weathersymbol Description Description Description"
+    "AlertHead Alert Alert Alert Alert";
+}
+#condition{
+    grid-area: Condition;
+    text-align: center;
+}
+#resolvedaddress{
+    grid-area: ResolvedAddress;
+}
+#weathersymbol{
+    grid-area: weathersymbol;
+    width: 60%;
+    justify-self: center;
+    height: auto;
+}
+#temperature{
+    grid-area: Temperature;
+}
+#precprob{
+    grid-area: PrecProb;
+}
+#description{
+    grid-area: Description;
+}
+#alerthead{
+    grid-area: AlertHead;
+    margin-right: 16px;
+}
+#alert{
+    grid-area: Alert;
+    align-self: center;
+}
+main{
+    justify-items: center;
 }

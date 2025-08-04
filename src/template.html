@@ -6,6 +6,33 @@
     <title>Matthew's Weather App</title>
 </head>
 <body>
-    <h1>Webpack Template!</h1>
+    <header>
+        <div>
+            <h1>Weather 101</h1>
+            <img src="./images/sun-umbrella-beach-svgrepo-com.svg" alt="" id="headersvg">
+        </div>
+
+        <form action="">
+            <input type="text" value="Enter a Location here" id="MainInput">
+            <button type="submit" id="submitbutton">></button>
+        </form>
+    </header>
+    <div id="tempchoose">
+        <p id="toggletemp" data-temptype="C">C°</p>
+    </div>
+    <main class="">
+        <div class="grid">
+            <p id="condition">Partly Cloudy</p>
+            <p id="resolvedaddress">Toronto, On, Canada</p>
+            <img src="./images/WeatherSvg/clear-day.svg" width="150px" id="weathersymbol">
+            <p id="temperature">Temperature: 72 Feels Like: 81</p>
+            <p id="precprob">Precipitation Probability: 10%</p>
+            <p id="description">Description: Expected to stay the same</p>
+            <p id="alerthead">Special Alert:</p>
+            <p id="alert">Severe Thunderstorms</p>
+        </div>
+
+    </main>
+
 </body>
 </html>
