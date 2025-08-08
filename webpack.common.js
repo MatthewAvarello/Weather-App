@@ -11,7 +11,10 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/template.html",
-            title: "Template Site"
+            title: "Template Site",
+            minify:{
+              removeRedundantAttributes: false
+            }
         })
     ],
     module: {
